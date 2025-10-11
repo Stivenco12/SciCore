@@ -147,26 +147,25 @@ body {
     color: #666;
     margin-top: 0.5vw;
 }
-
-/* ---------- RESPONSIVE (TELÉFONOS) ---------- */
 @media screen and (max-width: 768px) {
+  body {
+    font-size: 2vw;
+    padding: 5vw;
+  }
 
-    body {
-        font-size: 4vw;
-        padding: 5vw;
-    }
+  .Titulo, .Contexto, .Descarga {
+    width: 100%;
+    position: static;
+    margin: 0;
+    padding: 0;
+  }
 
-    /* Todo en una columna */
-    .Titulo, .Contexto, .Descarga {
-        width: 100%;
-        position: static;
-        margin: 0;
-    }
+  /* Centrado general del título */
+  .Titulo {
+    text-align: center;
+    margin-bottom: 4vw;
 
-    .Titulo {
-        text-align: center;
-        margin-bottom: 4vw;
-    }
+  }
 
     .p1 {
         font-size: 7vw;
@@ -182,60 +181,92 @@ body {
         font-size: 4vw;
         text-align: justify;
     }
+  /* --- Ajustes específicos de Descarga para móvil --- */
+  .Descarga {
+    margin-top: 10vw;
+    position: relative;
+    display: flex;
+    justify-content: center;   /* centra horizontalmente el contenido */
+    padding: 0 6vw;            /* espacio lateral en el viewport */
+    box-sizing: border-box;
+  }
 
-    /* Imágenes APK: scroll horizontal */
-    .imagenes-apk {
-        display: flex;
-        gap: 3vw;
-        overflow-x: auto;
-        justify-content: flex-start;
-        scroll-snap-type: x mandatory;
-        padding-bottom: 3vw;
-    }
+  .descarga-card {
+    width: 100%;
+    max-width: 380px;          /* limita anchura para que no se estire */
+    margin: 0 auto;            /* asegura centrado */
+    padding: 5vw 4vw;         /* padding interior equilibrado */
+    box-sizing: border-box;
+    text-align: center;        /* centra texto e hijos dentro de la card */
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  }
 
-    .imagenes-apk img {
-        width: 80%;
-        min-width: 250px;
-        border-radius: 12px;
-        scroll-snap-align: center;
-        transition: none;
-    }
+  /* Contenido interno: asegura que todo esté centrado y con gaps */
+  .descarga-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* centra hijos (botón, QR) */
+    gap: 2.5vw;
+  }
 
-    /* Descarga abajo */
-    .Descarga {
-        margin-top: 10vw;
-        position: relative;
-        display: block;
-    }
+  /* Botón: tamaño cómodo en móvil */
+  .p7 {
+    font-size: 4vw;
+    padding: 12px 22px;
+    border-radius: 10px;
+  }
 
-    .descarga-card {
-        width: 100%;
-        padding: 6vw;
-    }
+  /* Caja QR centrada y con un tamaño fijo razonable */
+  .qr-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #faf8ff;
+    border-radius: 12px;
+    padding: 1.2vw;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+    width: 100%;               /* toma todo el ancho interior de la card */
+    max-width: 300px;          /* evita ampliarse demasiado */
+    box-sizing: border-box;
+  }
 
-    .p4 {
-        font-size: 6vw;
-    }
+  .p9 {
+    width: 180px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+  }
 
-    .p5 {
-        font-size: 4.5vw;
-    }
+  .qr-text {
+    font-size: 3.5vw;
+    margin-top: 0.6vw;
+    color: #666;
+  }
 
-    .p6 {
-        font-size: 4vw;
-    }
+  /* Texto dentro de la card */
+  .p4 { font-size: 6vw; }
+  .p5 { font-size: 4.5vw; }
+  .p6 { font-size: 4vw; }
 
-    .p7 {
-        font-size: 4vw;
-        padding: 12px 20px;
-        border-radius: 10px;
-    }
+  /* Imágenes APK: scroll horizontal */
+  .imagenes-apk {
+    display: flex;
+    gap: 3vw;
+    overflow-x: auto;
+    justify-content: flex-start;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 3vw;
+  }
 
-    .p9 {
-        width: 200px;
-    }
-
-    .qr-text {
-        font-size: 3.5vw;
-    }
+  .imagenes-apk img {
+    width: 80%;
+    min-width: 250px;
+    border-radius: 12px;
+    scroll-snap-align: center;
+    transition: none;
+  }
 }
