@@ -1,3 +1,4 @@
+/* ---------- BASE GENERAL ---------- */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -6,7 +7,7 @@ body {
     font-size: 1.5vw;
 }
 
-/* TÍTULO */
+/* ---------- TITULO Y CONTEXTO ---------- */
 .Titulo {
     width: 40%;
 }
@@ -16,10 +17,9 @@ body {
     color: #333;
 }
 
-/* CONTEXTO */
 .Contexto {
     width: 50%;
-}   
+}
 
 .p2 {
     margin-top: -2vw;
@@ -31,27 +31,27 @@ body {
     text-align: justify;
 }
 
-/* CONTENEDOR DE IMÁGENES */
+/* ---------- IMÁGENES APK ---------- */
 .imagenes-apk {
     display: flex;
     justify-content: space-between;
     gap: 1vw;
     margin-top: 1.5vw;
+    flex-wrap: nowrap;
 }
 
 .imagenes-apk img {
-    width: 30%;             /* 3 imágenes = 30% cada una */
+    width: 30%;
     border-radius: 8px;
     transition: transform 0.4s ease-in-out;
     cursor: pointer;
 }
 
-/* Efecto de rotación ligera al pasar el mouse */
 .imagenes-apk img:hover {
     transform: rotate(3deg) scale(1.05);
 }
 
-/* DESCARGA */
+/* ---------- DESCARGA (PC) ---------- */
 .Descarga {
     position: fixed;
     width: 40%;
@@ -62,7 +62,7 @@ body {
     align-items: center;
 }
 
-/* Tarjeta contenedora */
+/* Tarjeta */
 .descarga-card {
     background: white;
     border-radius: 16px;
@@ -76,7 +76,7 @@ body {
     transform: translateY(-5px);
 }
 
-/* Títulos */
+/* Textos */
 .p4 {
     font-size: 2.5vw;
     color: #5b0ea8;
@@ -89,14 +89,13 @@ body {
     margin-bottom: 1vw;
 }
 
-/* Texto de descripción */
 .p6 {
     font-size: 1.2vw;
     color: #555;
     margin-bottom: 2vw;
 }
 
-/* Contenedor del botón y QR */
+/* Contenido del bloque */
 .descarga-contenido {
     display: flex;
     flex-direction: column;
@@ -104,7 +103,7 @@ body {
     gap: 2vw;
 }
 
-/* Botón de descarga */
+/* Botón */
 .p7 {
     display: inline-block;
     padding: 14px 30px;
@@ -149,3 +148,94 @@ body {
     margin-top: 0.5vw;
 }
 
+/* ---------- RESPONSIVE (TELÉFONOS) ---------- */
+@media screen and (max-width: 768px) {
+
+    body {
+        font-size: 4vw;
+        padding: 5vw;
+    }
+
+    /* Todo en una columna */
+    .Titulo, .Contexto, .Descarga {
+        width: 100%;
+        position: static;
+        margin: 0;
+    }
+
+    .Titulo {
+        text-align: center;
+        margin-bottom: 4vw;
+    }
+
+    .p1 {
+        font-size: 7vw;
+        text-align: center;
+    }
+
+    .p2 {
+        font-size: 5vw;
+        text-align: center;
+    }
+
+    .p3 {
+        font-size: 4vw;
+        text-align: justify;
+    }
+
+    /* Imágenes APK: scroll horizontal */
+    .imagenes-apk {
+        display: flex;
+        gap: 3vw;
+        overflow-x: auto;
+        justify-content: flex-start;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 3vw;
+    }
+
+    .imagenes-apk img {
+        width: 80%;
+        min-width: 250px;
+        border-radius: 12px;
+        scroll-snap-align: center;
+        transition: none;
+    }
+
+    /* Descarga abajo */
+    .Descarga {
+        margin-top: 10vw;
+        position: relative;
+        display: block;
+    }
+
+    .descarga-card {
+        width: 100%;
+        padding: 6vw;
+    }
+
+    .p4 {
+        font-size: 6vw;
+    }
+
+    .p5 {
+        font-size: 4.5vw;
+    }
+
+    .p6 {
+        font-size: 4vw;
+    }
+
+    .p7 {
+        font-size: 4vw;
+        padding: 12px 20px;
+        border-radius: 10px;
+    }
+
+    .p9 {
+        width: 200px;
+    }
+
+    .qr-text {
+        font-size: 3.5vw;
+    }
+}
