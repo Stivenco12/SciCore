@@ -14,7 +14,7 @@ body {
 
 .p1 {
     font-size: 3vw;
-    color: #333;
+    color: #000000;
 }
 
 .Contexto {
@@ -24,6 +24,7 @@ body {
 .p2 {
     margin-top: -2vw;
     font-size: 2vw;
+    color : #333;
 }
 
 .p3 {
