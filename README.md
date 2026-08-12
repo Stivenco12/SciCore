@@ -1,72 +1,74 @@
-# Física/Química
+# Prueba de Astro 🚀
 
-A simple Android app that provides interactive simulations for physics and chemistry concepts.
+Proyecto de práctica construido con [Astro](https://astro.build), basado en la plantilla oficial *Basics*. Sirve como punto de partida para explorar la estructura y el flujo de trabajo de Astro.
 
-![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
+## 📦 Tecnologías
 
-## Table of Contents
-- [Overview](#overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- [Astro](https://astro.build) — Framework web para sitios rápidos y orientados a contenido.
+- TypeScript (configuración incluida vía `tsconfig.json`).
 
-## Overview
-The Física/Química app is a educational tool designed to help users understand and visualize various physics and chemistry principles. It features two interactive simulations:
+## 🗂️ Estructura del proyecto
 
-1. **Spring Simulator**: Demonstrates the behavior of a mass-spring system with damped oscillations, allowing users to adjust the mass and spring constant.
-2. **Pressure Calculator**: Provides calculations for both mechanical pressure (Force/Area) and ideal gas pressure (n*R*T/V).
+```
+/
+├── public/
+│   └── favicon.svg
+├── src/
+│   ├── assets/
+│   │   └── astro.svg
+│   ├── components/
+│   │   └── Welcome.astro
+│   ├── layouts/
+│   │   └── Layout.astro
+│   └── pages/
+│       └── index.astro
+├── astro.config.mjs
+├── package.json
+└── tsconfig.json
+```
 
-The app is built using Kotlin and the Jetpack Compose UI toolkit, providing a modern and intuitive interface.
+- `src/pages/` — Cada archivo `.astro` se convierte automáticamente en una ruta del sitio.
+- `src/components/` — Componentes reutilizables de Astro.
+- `src/layouts/` — Plantillas de diseño compartidas entre páginas.
+- `public/` — Archivos estáticos que se sirven tal cual (imágenes, favicon, etc.).
 
-## Features
-- Spring simulation with adjustable mass and spring constant
-- Pressure calculations for mechanical and ideal gas systems
-- Intuitive user interface with sliders and real-time updates
-- Supports both light and dark themes
+Más información en la [guía de estructura de proyectos de Astro](https://docs.astro.build/en/basics/project-structure/).
 
-## Tech Stack
-- Kotlin
-- Jetpack Compose
-- Android Gradle Plugin
-- Gradle
+## 🧞 Comandos disponibles
 
-## Prerequisites
-To run the Física/Química app, you'll need the following:
-- Android Studio
-- An Android device or emulator running Android 5.0 (Lollipop) or higher
+Todos los comandos se ejecutan desde la raíz del proyecto en una terminal:
 
-## Installation
-1. Clone the repository:
+| Comando                   | Acción                                                       |
+| :------------------------ | :------------------------------------------------------------ |
+| `npm install`              | Instala las dependencias                                     |
+| `npm run dev`               | Inicia el servidor de desarrollo en `localhost:4321`         |
+| `npm run build`             | Genera el sitio de producción en `./dist/`                   |
+| `npm run preview`           | Previsualiza el build localmente antes de desplegar           |
+| `npm run astro ...`         | Ejecuta comandos CLI de Astro, como `astro add` o `astro check` |
+| `npm run astro -- --help`   | Muestra la ayuda del CLI de Astro                             |
+
+## 🚀 Cómo empezar
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/Stivenco12/Prueba_de_Astro.git
+   cd Prueba_de_Astro
    ```
-   git clone https://github.com/jedier-stivenson/fisica-quimica.git
+2. Instala las dependencias:
+   ```bash
+   npm install
    ```
-2. Open the project in Android Studio.
-3. Connect an Android device or start an emulator.
-4. Build and run the app.
+3. Levanta el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+4. Abre [http://localhost:4321](http://localhost:4321) en tu navegador.
 
-## Usage
-1. Launch the app on your Android device or emulator.
-2. Use the tab bar at the top to switch between the Spring Simulator and Pressure Calculator.
-3. In the Spring Simulator, adjust the mass and spring constant using the sliders. The simulation will update in real-time, showing the oscillating motion of the mass.
-4. In the Pressure Calculator, select the calculation mode (Mechanical or Ideal Gas) and adjust the corresponding input parameters. The calculated pressure values will be displayed.
+## 👀 Recursos adicionales
 
-## Contributing
-Contributions to the Física/Química project are welcome! If you find any issues or have suggestions for improvements, please feel free to submit a pull request or open an issue. 
+- [Documentación oficial de Astro](https://docs.astro.build)
+- [Discord de Astro](https://astro.build/chat)
 
-To contribute:
-1. Fork the repository
-2. Create a new branch for your changes
-3. Make your changes and commit them
-4. Push your changes to your fork
-5. Submit a pull request
+## 📄 Licencia
 
-## License
-This project is licensed under the [MIT License](LICENSE).
-
----
-<!-- pushpen-footer -->
-Documentation automatically generated and kept up to date by [Pushpen](https://pushpen.dev).
+Este proyecto no especifica una licencia. Puedes añadir una según lo necesites (por ejemplo, MIT).
